@@ -2,7 +2,7 @@
 {
     using Newtonsoft.Json;
     using MutualMyPJHPApp.Classes;
-    using MutualMyPJHPApp.Models;
+    using MutualMyPJHPCommon.Models;
     using System;
     using System.Collections.Generic;
     using System.Net.Http;
@@ -127,7 +127,7 @@
                 }
 
                 var result = await response.Content.ReadAsStringAsync();
-                var newRecord = JsonConvert.DeserializeObject<User2>(result);
+                var newRecord = JsonConvert.DeserializeObject<Usuario>(result);
 
                 return new Response
                 {

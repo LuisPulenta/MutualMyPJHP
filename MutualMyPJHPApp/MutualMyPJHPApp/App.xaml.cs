@@ -3,7 +3,7 @@
     using MutualMyPJHPApp.Pages;
     using Xamarin.Forms;
     using MutualMyPJHPApp.Services;
-    using MutualMyPJHPApp.Models;
+    using MutualMyPJHPCommon.Models;
     using System;
     using MutualMyPJHPApp.ViewModels;
 
@@ -15,7 +15,7 @@
 
         #region Properties
         public static NavigationPage Navigator { get; internal set; }
-        //public static MasterPage Master { get; internal set; }
+        public static MasterPage Master { get; internal set; }
         #endregion
 
         #region Constructor

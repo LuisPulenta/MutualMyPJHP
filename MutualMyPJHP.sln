@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutualMyPJHPApp.Android", "MutualMyPJHPApp\MutualMyPJHPApp.Android\MutualMyPJHPApp.Android.csproj", "{380B0434-8C2B-4184-BCA9-05121BAC37C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutualMyPJHPApp", "MutualMyPJHPApp\MutualMyPJHPApp\MutualMyPJHPApp.csproj", "{2101542D-7D2D-4935-9343-BB0BC6D686CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MutualMyPJHPApp", "MutualMyPJHPApp\MutualMyPJHPApp\MutualMyPJHPApp.csproj", "{2101542D-7D2D-4935-9343-BB0BC6D686CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutualMyPJHPAPI", "MutualMyPJHPAPI\MutualMyPJHPAPI.csproj", "{AB3D82FC-9D72-4705-995E-672FB8132DEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutualMyPJHPCommon", "MutualMyPJHPCommon\MutualMyPJHPCommon.csproj", "{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,18 @@ Global
 		{AB3D82FC-9D72-4705-995E-672FB8132DEA}.Release|iPhone.Build.0 = Release|Any CPU
 		{AB3D82FC-9D72-4705-995E-672FB8132DEA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{AB3D82FC-9D72-4705-995E-672FB8132DEA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Release|iPhone.Build.0 = Release|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9C4CFB8F-E8D3-4734-A2AE-59AD709F5E44}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿namespace MutualMyPJHPApp.ViewModels
 {
-    using MutualMyPJHPApp.Models;
+    using MutualMyPJHPCommon.Models;
     using MutualMyPJHPApp.Pages;
     using GalaSoft.MvvmLight.Command;
 
@@ -8,11 +8,12 @@
     using System.ComponentModel;
     using System.Windows.Input;
     using MutualMyPJHPApp.ViewModels;
+    using global::ViewModels;
 
     public class MainViewModel : INotifyPropertyChanged
     {
         #region Attributes
-        private User2 currentUser;
+        private Usuario currentUser;
         #endregion
 
         #region Events
@@ -21,11 +22,13 @@
 
         #region Properties
         public LoginViewModel Login { get; set; }
-        
+        public ObservableCollection<MenuItemViewModel> Menu { get; set; }
+
+        public JubilacionesViewModel Jubilaciones { get; set; }
+        public JubilacionViewModel Jubilacion { get; set; }
 
 
-
-        public User2 CurrentUser
+    public Usuario CurrentUser
         {
             set
             {
@@ -47,7 +50,7 @@
         {
             instance = this;
             Login = new LoginViewModel();
-            //LoadMenu();
+            LoadMenu();
         }
         #endregion
 
@@ -66,37 +69,31 @@
         #endregion
 
         #region Methods
-        //private void LoadMenu()
-        //{
-        //    Menu = new ObservableCollection<MenuItemViewModel>();
+        private void LoadMenu()
+        {
+            Menu = new ObservableCollection<MenuItemViewModel>();
 
-        //    Menu.Add(new MenuItemViewModel
-        //    {
-        //        Icon = "ic_action_build.png",
-        //        PageName = "OrdersPage",
-        //        Title = "Ordenes Pendientes",
-        //    });
-        //    Menu.Add(new MenuItemViewModel
-        //    {
-        //        Icon = "ic_action_settings_remote.png",
-        //        PageName = "RemotesPage",
-        //        Title = "Controles Remotos",
-        //    });
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_view_list.png",
+                PageName = "JubilacionesPage",
+                Title = "Recibos",
+            });
 
-        //    Menu.Add(new MenuItemViewModel
-        //    {
-        //        Icon = "",
-        //        PageName = "",
-        //        Title = "",
-        //    });
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "",
+                PageName = "",
+                Title = "",
+            });
 
-        //    Menu.Add(new MenuItemViewModel
-        //    {
-        //        Icon = "ic_action_exit_to_app.png",
-        //        PageName = "LoginPage",
-        //        Title = "Cerrar Sesión",
-        //    });
-        //}
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_exit_to_app.png",
+                PageName = "LoginPage",
+                Title = "Cerrar Sesión",
+            });
+        }
         #endregion
     }
 }

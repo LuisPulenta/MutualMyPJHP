@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using Plugin.Connectivity;
-using MutualMyPJHPApp.Models;
+using MutualMyPJHPCommon.Models;
 using MutualMyPJHPApp.Services;
 using System.ComponentModel;
 using System.Windows.Input;
@@ -119,8 +119,8 @@ namespace MutualMyPJHPApp.ViewModels
             Email = null;
             Password = null;
 
-            //Email = "Demo";
-            //Password = "Demo";// null;
+            Email = "6515566";
+            Password = "6515566";// null;
         }
         #endregion
 
@@ -152,6 +152,11 @@ namespace MutualMyPJHPApp.ViewModels
             IsRunning = true;
             IsEnabled = false;
 
+
+
+            
+
+
             if (!CrossConnectivity.Current.IsConnected)
             {
                 IsRunning = false;
@@ -165,7 +170,7 @@ namespace MutualMyPJHPApp.ViewModels
             var response = await apiService.GetUserByEmail(
                 "http://keypress.serveftp.net:88/MutualMyPJHPAPI/",
                 "api",
-                "/SubContratistasUsrWebs/GetUserByEmail",
+                "/Usuarios/GetUserByEmail",
                 Email);
 
 
@@ -178,7 +183,7 @@ namespace MutualMyPJHPApp.ViewModels
                 return;
             }
 
-            var user = (User2)response.Result;
+            var user = (Usuario)response.Result;
 
 
             if (!(user.Password.ToLower() == Password.ToLower()))

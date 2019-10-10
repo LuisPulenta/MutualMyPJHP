@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MutualMyPJHPApp.Pages.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Mutual M y PJ HP"
+             BackgroundColor="White">
+  <ScrollView>
+    <StackLayout BindingContext="{Binding Login}"
+                 Padding="5">
+      <Label Text=""
+             TextColor="LightGray"
+             FontSize="Small"
+             HorizontalOptions="CenterAndExpand"
+             VerticalOptions="Center"
+             FontAttributes="Bold"></Label>
+      <Image Source="logo.jpg"
+             WidthRequest="100"
+             HeightRequest="80"></Image>
+      <Label Text=""
+             TextColor="DarkMagenta"
+             FontSize="Medium"
+             HorizontalOptions="CenterAndExpand"
+             VerticalOptions="Center"
+             FontAttributes="Bold"></Label>
+      <BoxView HeightRequest="3"
+               Color="{StaticResource BackGroundColor}"></BoxView>
+      <!--GRILLA EMAIL-->
+      <Grid Padding="0,10">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*" />
+          <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <!--MAIL-->
+        <Label Grid.Row=" 0"
+               Grid.Column="0 "
+               FontSize="Medium"
+               FontAttributes="Bold"
+               Text="Usuario:"
+               TextColor="Black"
+               VerticalOptions="Center"></Label>
+        <Entry Grid.Row=" 0"
+               Grid.Column="1 "
+               FontSize="Medium"
+               VerticalOptions="CenterAndExpand"
+               Keyboard="Email"
+               Text="{Binding Email, Mode=TwoWay }"
+               Placeholder=" Ingrese su Usuario..."
+               BackgroundColor="White"
+               TextColor="Black"></Entry>
+        <!--GRILLA PASSWORD-->
+        <Label Grid.Row=" 1"
+               Grid.Column="0 "
+               FontSize="Medium"
+               FontAttributes="Bold"
+               Text="Contraseña:"
+               TextColor="Black"
+               VerticalOptions="Center"></Label>
+        <Entry Grid.Row=" 1"
+               Grid.Column="1 "
+               FontSize="Medium"
+               IsPassword="True"
+               Text="{Binding Password, Mode=TwoWay }"
+               VerticalOptions="CenterAndExpand"
+               Placeholder=" Ingrese su Contraseña..."
+               BackgroundColor="White"
+               TextColor="Black"></Entry>
+      </Grid>
+      <!--RECORDARME EN ESTE DISPOSITIVO-->
+      <!-- <StackLayout Orientation="Horizontal">
+        <Label VerticalOptions="Center"
+               HorizontalOptions="Start"
+               FontSize="Medium"
+               Text="Recordarme en este dispositivo:"
+               TextColor="Black"></Label>
+        <Switch HorizontalOptions="CenterAndExpand"
+                IsToggled="{Binding IsRemembered,Mode=TwoWay }"></Switch>
+      </StackLayout>-->
+      <ActivityIndicator VerticalOptions="Start"
+                         IsRunning="{Binding IsRunning, Mode=TwoWay }"></ActivityIndicator>
+      <!--BOTON LOGIN-->
+      <StackLayout Padding=" 30,0"
+                   Spacing="20"
+                   VerticalOptions="CenterAndExpand"
+                   Orientation="Vertical">
+        <Button BackgroundColor="Blue"
+                CornerRadius="23"
+                Command="{Binding LoginCommand} "
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                Text="Ingresar"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"></Button>
+        <!--OLVIDE MI PASSWORD-->
+        <!--
+        <Label VerticalOptions="FillAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               BackgroundColor="White"
+               Text="Olvidé mi password"
+               TextDecorations="Underline"
+               TextColor="Blue">
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer 
+              Command="{Binding ForgotPasswordCommand}">
+            </TapGestureRecognizer>
+          </Label.GestureRecognizers>
+        </Label> -->
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

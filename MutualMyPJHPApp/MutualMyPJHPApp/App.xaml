@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:infra="clr-namespace:MutualMyPJHPApp.Infrastructure;assembly=MutualMyPJHPApp"
+             x:Class="MutualMyPJHPApp.App">
+    <Application.Resources>
+    <ResourceDictionary>
+      <!--Colors -->
+      <Color x:Key="MainColor">#38401A</Color>
+      <Color x:Key="FontColor">#261B14</Color>
+      <Color x:Key="AccentColor">#D9B88F</Color>
+      <Color x:Key="AccentColor1">#D9B88F</Color>
+      <Color x:Key="AccentColor2">#A68863</Color>
+      <Color x:Key="BackGroundColor">#C1CED9</Color>
+      <!--Locator-->
+      <infra:InstanceLocator x:Key="Locator" />
+      <!-- Parameters -->
+      <x:String x:Key="URLBase">http://keypress.serveftp.net:88/EzentisApi/</x:String>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
